@@ -5,6 +5,7 @@ workflows:
     max_build_duration: 60
     scripts:
       - brew install php
+      - brew install phoronix-test-suite
       - phoronix-test-suite benchmark smallpt
     publishing:
       email:
