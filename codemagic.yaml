@@ -1,0 +1,14 @@
+# Automatically generated on 2020-06-18 UTC from https://codemagic.io/app/5eeb5147744951000abcd995/settings
+# Note that this configuration is not an exact match to UI settings. Review and adjust as necessary.
+
+workflows:
+  default-workflow:
+    name: Default Workflow
+    max_build_duration: 120
+    scripts:
+      - |
+      phoronix-test-suite benchmark smallpt
+    publishing:
+      email:
+        recipients:
+          - rvalancauskaite@gmail.com
