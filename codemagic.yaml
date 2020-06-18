@@ -4,10 +4,7 @@ workflows:
     instance_type: mac_mini
     max_build_duration: 60
     scripts:
-      - sudo apt-get install apache2-mpm-prefork
-      - wget http://downloads.php.net/stas/php-5.4.0beta2.tar.bz2
-      - tar xvjf php-5.4.0beta2.tar.bz2
-      - cd php-5.4.0beta2
+      - brew install php
       - phoronix-test-suite benchmark smallpt
     publishing:
       email:
