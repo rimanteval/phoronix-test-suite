@@ -1,14 +1,15 @@
-# Automatically generated on 2020-06-18 UTC from https://codemagic.io/app/5eeb5147744951000abcd995/settings
-# Note that this configuration is not an exact match to UI settings. Review and adjust as necessary.
-
 workflows:
-  default-workflow:
-    name: Default Workflow
-    max_build_duration: 120
+  my-workflow:
+    name: My workflow name
+    instance_type: mac_mini
+    max_build_duration: 60
     scripts:
-      - |
-      phoronix-test-suite benchmark smallpt
+      - sudo apt-get install apache2-mpm-prefork
+      - wget http://downloads.php.net/stas/php-5.4.0beta2.tar.bz2
+      - tar xvjf php-5.4.0beta2.tar.bz2
+      - cd php-5.4.0beta2
+      - phoronix-test-suite benchmark smallpt
     publishing:
       email:
         recipients:
-          - rvalancauskaite@gmail.com
+          - rimante@nevercode.io
